@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ramzan</title>
+<style>
+body{
+background-color:black;
+justify-content: center;
+align-items: center;
+
+}
+.circle{ 
+     position: absolute; 
+     top: 15%; 
+     left: 75%; 
+     transform: translate(-50%, -50%); 
+     height: 100px; 
+     width: 100px; 
+     box-shadow: -15px 15px 0px 1px white;
+     border-radius:50px;
+     
+   } 
+   
+.triangle-up {
+    margin-left:50px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 25px solid #fff;
+    position:relative;
+}
+.triangle-down {
+    margin-top:-85px;
+    margin-left:50px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 25px solid #fff;
+    position:absolute;
+}
+.triangle-up1 {
+margin-top:-30px;
+    margin-left:300px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 25px solid #fff;
+    position:relative;
+}
+.triangle-down2 {
+    margin-top:-15px;
+    margin-left:300px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 25px solid #fff;
+    position:absolute;
+}
+.triangle-up3 {
+margin-top:-60px;
+    margin-left:150px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 25px solid #fff;
+    position:relative;
+}
+
+.triangle-down6{
+    margin-top:-15px;
+    margin-left:150px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 25px solid #fff;
+    position:absolute;
+}
+.triangle-up7{
+    margin-top:-50px;
+    margin-left:500px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 25px solid #fff;
+    position:relative;
+}
+.triangle-down8{
+    margin-top:-15px;
+    margin-left:500px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 25px solid #fff;
+    position:absolute;
+}
+.triangle-up9{
+    margin-top:-30px;
+    margin-left:700px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 25px solid #fff;
+    position:relative;
+}
+.triangle-down10{
+    margin-top:-15px;
+    margin-left:700px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 25px solid #fff;
+    position:absolute;
+}
+.triangle-up11{
+    margin-top:-30px;
+    margin-left:900px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 25px solid #fff;
+    position:relative;
+}
+.triangle-down12{
+    margin-top:-15px;
+    margin-left:900px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 25px solid #fff;
+    position:absolute;
+}
+img{
+	margin-top:-100px;
+	margin-left:1100px;
+}
+
+
+.container {
+  height: 400px;
+  width: 350px;
+  position: relative;
+}
+
+.container * {
+  position: absolute;
+}
+
+.house {
+  top: 70%;
+  left: 50px;
+  height: 400px;
+  width: 270px;
+  background: #FFF;
+}
+.house::before {
+  content: '';
+  position: absolute;
+  top: -95px;
+  left: 33px;
+  height: 183px;
+  width: 183.5px;
+  background: white;
+  transform: rotate(45deg);
+  border-top: 10px solid blue;
+  border-left: 10px solid blue;
+  z-index: 2
+}
+.house::after {
+  content: '';
+  position: absolute;
+  top: -70px;
+  left: 15px;
+  height: 70px;
+  width: 30px;
+  background: blue;
+  z-index: 1;
+  border-top: 7px solid rgba(0, 0, 0, .3);
+}
+.window {
+  top: 35px;
+  left: 25px;
+  height: 80px;
+  width: 70px;
+  background: #96ebff;
+  z-index: 3;
+  border-top: 7px solid blue;
+}
+.window::before,
+.window::after {
+  content: '';
+  position: absolute;
+  background: silver;
+}
+.window::before {
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 1px;
+}
+.window::after {
+  top: 50%;
+  height: 1px;
+  width: 100%;
+}
+
+.door {
+  top: 70px;
+  left: 150px;
+  height: 130px;
+  width: 70px;
+  background: blue;
+  z-index: 3;
+}
+.door::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+  background: #96ebff;
+}
+
+.flower {
+  bottom: 0;
+  height: 60px;
+  width: 60px;
+  background: green;
+  z-index: 4;
+  border-radius: 30px 30px 3px 0;
+  box-shadow: 1px -1px 7px rgba(0, 0, 0, .5);
+}
+.flower::before {
+  content: '';
+  position: absolute;
+  bottom: -0px;
+  left: 40px;
+  height: 40px;
+  width: 50px;
+  background: green;
+  border-radius: 50% 50% 0 0;
+}
+.flower::after {
+  content: '';
+  position: absolute;
+  bottom: -0px;
+  left: 80px;
+  height: 40px;
+  width: 50px;
+  background: green;
+  border-radius: 50% 50% 15% 0;
+}
+.greeting-container {
+	
+  text-align: center;
+}
+.greeting {
+  top:1000px;
+  
+  margin-top: -200px;
+  font-size: 2em;
+  color: #25bb07;
+  animation: fadeInUp 10s ease forwards;
+
+}
+.ramadan-kareem {
+  color:red;
+  font-size: 4em;
+  margin: 20px 0;
+  animation: fadeIn 5s ease forwards;
+}
+.greeting1{
+	font-size: 2em;
+  color: #07bb1f;
+  animation: fadeInUp 10s ease forwards;
+  
+  
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+	animation-delay: 2s;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+	animation-delay: 2s;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+</style>
+</head>
+<body>
+<div class="circle"></div>
+<h2>Triangle Up CSS</h2>
+<div class="triangle-up"></div>
+<h2>Triangle Down CSS</h2>
+<div class="triangle-down"></div>
+<div class="triangle-up1"></div>
+<div class="triangle-down2"></div>
+<div class="triangle-up3"></div>
+
+<div class="triangle-down6"></div>
+<div class="triangle-up7"></div>
+<div class="triangle-down8"></div>
+<div class="triangle-up9"></div>
+<div class="triangle-down10"></div>
+<div class="triangle-up11"></div>
+<div class="triangle-down12"></div>
+
+
+<div class="container">
+	<div class="house">
+	  <div class="window"></div>
+	  <div class="door"></div>
+	  <div class="flower"></div>
+	</div>
+  </div>
+  <div class="moon"></div>
+  <div class="triangle-up"></div>
+  <div class="triangle-down"></div>
+  <div class="triangle-up1"></div>
+  <div class="triangle-down2"></div>
+
+  <div class="greeting-container">
+    <div class="greeting">Wishing you and your family</div>
+    <div class="ramadan-kareem">Ramadan Kareem ❤</div>
+    <div class="greeting1">May this holy month bring peace and happiness<br>to you and your loved ones</div>
+  </div>
+
+<img src="pngtree-muslim-man-praying-png-image_6093673.png">
+
+
+
+
+
+
+
+
+
+</body>
+</html> 
